@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  border: 1px solid black;
+}
+th {
+  text-align: start;
+  background-color: thistle;
+  padding: 8px;
+}
+td {
+    padding: 8px;
+}
+tr:hover {
+background-color: whitesmoke;
+}
+#logo {
+    text-align: center;
+}
+#get {
+    width: 100%;
+    text-align: center;
+}
+
+#get > img {
+    transform: scale(0.66);
+    opacity: 0.8;
+    cursor: pointer;
+}

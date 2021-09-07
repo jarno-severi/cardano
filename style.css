@@ -9,6 +9,7 @@ th {
 }
 td {
     padding: 8px;
+    height: 28px;
 }
 tr:hover {
 background-color: whitesmoke;
@@ -20,9 +21,11 @@ background-color: whitesmoke;
     width: 100%;
     text-align: center;
 }
-
 #get > img {
     transform: scale(0.66);
     opacity: 0.8;
     cursor: pointer;
+}
+#get > p {
+  margin-top: 4px;
 }

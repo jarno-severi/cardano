@@ -19,13 +19,11 @@ const cardano = {
   },
   callback() {
     const data = this.response[0];
-    /* const keys = Object.keys(data);
-    console.log(keys);
-    const values = Object.values(data); */
+    console.log(data);    
     appendLogo("#logo", data.image);
     appendText("#name", data.name);
-    appendText("#price", data.current_price);
-    appendText("#rank", data.market_cap_rank);
+    appendText("#price", `${data.current_price} €`);
+    appendText("#rank", `${data.price_change_percentage_24h.toFixed(2)} %`);
   },
 };
 
@@ -50,6 +48,8 @@ function render() {
   if (td.childElementCount > 0) {
     tds.forEach(removeElements);
     cardano.get();
+  } else {
+    cardano.get();
   }
 }
 
@@ -59,4 +59,5 @@ function removeElements(node) {
 
 const button = document.querySelector("#get");
 button.addEventListener("click", render);
-cardano.get();
+window.onload = cardano.get();
+setInterval(render, 30000);
